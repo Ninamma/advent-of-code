@@ -1,28 +1,20 @@
-#def finalSum(input):
-input = open("Inputs/Day-1.txt")
-s = []
-for line in input:
-    #if line.find("\n") != -1:
-        #line = input.readline()#.split('\n')[0]
-    #print(line)
-    s.append(int(line))
-print(sum(s))
+#Second half is incredibly slow...  I will work on it!!
+def dayOne(file):
+    input = open(file)
+    nums = []
+    for line in input:
+        nums.append(int(line))
+    print(sum(nums))
 
-freq = 0
-track = []
-for n in s:
-    freq += n
-    s.append(n)
-    if freq not in track:
-        track.append(freq)
-    else:
-        break
-print(freq)
+    freq = 0
+    track = []
+    for n in nums:
+        freq += n
+        nums.append(n)
+        if freq not in track:
+            track.append(freq)
+        else:
+            break
+    return(freq)
 
-
-
-
-
-#print(finalSum(open("Inp uts/Day-1.txt")))
-#print(twice(open("Inputs/Day-1.txt")))
-#print(twice())
+print(dayOne("Inputs/Day-1.txt"))
