@@ -8,13 +8,6 @@ for line in input:
     nonChron.append(line.split('\n')[0])
 chron = sorted(nonChron)
 
-dates = []
-for entry in chron:
-    date = entry.split(' ')[0][1:]
-    if date not in dates:
-        dates.append(date)
-#print(dates)
-
 guards = []
 indicies = []
 for entry in chron:
